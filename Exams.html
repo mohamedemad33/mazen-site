@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الامتحانات | المازن كيمياء ثانوي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #0a3d62;
+            padding: 15px 30px;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0a3d62;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .exam {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .exam h3 {
+            color: #1e90ff;
+            margin-bottom: 15px;
+        }
+
+        .exam p {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #0a3d62;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>المازن – كيمياء ثانوي</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">عن المدرس</a>
+        <a href="subjects.html">المنهج</a>
+        <a href="booking.html">احجز حصة</a>
+        <a href="Exams.html">الامتحانات</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>نماذج الامتحانات</h2>
+
+    <!-- امتحان 1 -->
+    <div class="exam">
+        <h3>📘 امتحان أولى ثانوي</h3>
+        <p>مدة الامتحان: 30 دقيقة</p>
+        <p>عدد الأسئلة: 10 أسئلة اختيار من متعدد</p>
+        <button onclick="startExam('first')">ابدأ الامتحان</button>
+    </div>
+
+    <!-- امتحان 2 -->
+    <div class="exam">
+        <h3>📗 امتحان تانية ثانوي</h3>
+        <p>مدة الامتحان: 45 دقيقة</p>
+        <p>عدد الأسئلة: 15 سؤال اختيار من متعدد</p>
+        <button onclick="startExam('second')">ابدأ الامتحان</button>
+    </div>
+
+    <!-- امتحان 3 -->
+    <div class="exam">
+        <h3>📕 امتحان تالتة ثانوي</h3>
+        <p>مدة الامتحان: 60 دقيقة</p>
+        <p>عدد الأسئلة: 20 سؤال اختيار من متعدد</p>
+        <button onclick="startExam('third')">ابدأ الامتحان</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 المازن – كيمياء الثانوية العامة
+</footer>
+
+<script>
+    function startExam(level) {
+        alert(`تم بدء امتحان ${level} 🧪`);
+        // هنا ممكن تضيف ربط لصفحة الأسئلة أو Quiz حقيقي
+        // مثال: window.location.href = "exam-first.html";
+    }
+</script>
+
+</body>
+</html>
