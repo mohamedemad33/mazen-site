@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>امتحان أولى ثانوي | المازن</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #0a3d62;
+            color: #fff;
+            padding: 15px 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0a3d62;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .question h3 {
+            margin-bottom: 15px;
+            color: #1e90ff;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #e67e22;
+        }
+
+        footer {
+            background-color: #0a3d62;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>المازن – كيمياء ثانوي</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">عن المدرس</a>
+        <a href="subjects.html">المنهج</a>
+        <a href="booking.html">احجز حصة</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="contact.html">تواصل</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>امتحان أولى ثانوي – الكيمياء</h2>
+
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. ما هو الرمز الكيميائي للماء؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> H2</label>
+                <label><input type="radio" name="q1" value="1"> H2O</label>
+                <label><input type="radio" name="q1" value="0"> O2</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>2. ما هو الرقم الذري للهيدروجين؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="1"> 1</label>
+                <label><input type="radio" name="q2" value="0"> 2</label>
+                <label><input type="radio" name="q2" value="0"> 0</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>3. ما نوع الرابطة في جزيء الماء؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="0"> أيونية</label>
+                <label><input type="radio" name="q3" value="1"> تساهمية</label>
+                <label><input type="radio" name="q3" value="0"> فلزّية</label>
+            </div>
+        </div>
+
+        <button type="submit">اعرض النتيجة</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<footer>
+    © 2026 المازن – كيمياء الثانوية العامة
+</footer>
+
+<script>
+    const quizForm = document.getElementById('quizForm');
+    const resultDiv = document.getElementById('result');
+
+    quizForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        let score = 0;
+        const formData = new FormData(quizForm);
+
+        for (let value of formData.values()) {
+            score += parseInt(value);
+        }
+
+        resultDiv.textContent = `لقد حصلت على ${score} من 3 نقاط`;
+    });
+</script>
+
+</body>
+</html>
